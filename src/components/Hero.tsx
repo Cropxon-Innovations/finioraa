@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, IndianRupee, TrendingUp, Shield, Sparkles, PieChart, Wallet } from "lucide-react";
+import DashboardPreview from "./DashboardPreview";
 
 const FloatingIcon = ({ 
   icon: Icon, 
@@ -141,7 +142,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-16 flex flex-wrap items-center justify-center gap-8 text-muted-foreground"
+            className="mt-12 flex flex-wrap items-center justify-center gap-8 text-muted-foreground"
           >
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-secondary" />
@@ -157,6 +158,9 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Dashboard Preview */}
+        <DashboardPreview />
       </div>
 
       {/* Bottom Wave */}

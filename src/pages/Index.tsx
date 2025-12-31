@@ -10,6 +10,7 @@ import AISection from "@/components/AISection";
 import FutureSection from "@/components/FutureSection";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
+import MobileShowcase from "@/components/MobileShowcase";
 
 const Index = () => {
   return (
@@ -43,6 +44,7 @@ const Index = () => {
         <HowItWorks />
         <SecuritySection />
         <AISection />
+        <MobileShowcase />
         <FutureSection />
         <CTABanner />
         <Footer />
