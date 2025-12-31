@@ -1,13 +1,53 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import ProblemSection from "@/components/ProblemSection";
+import SolutionSection from "@/components/SolutionSection";
+import FeaturesGrid from "@/components/FeaturesGrid";
+import HowItWorks from "@/components/HowItWorks";
+import SecuritySection from "@/components/SecuritySection";
+import AISection from "@/components/AISection";
+import FutureSection from "@/components/FutureSection";
+import CTABanner from "@/components/CTABanner";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>FINIORAA – Your Personal Finance Operating System | India's Most Intelligent Finance Platform</title>
+        <meta 
+          name="description" 
+          content="Track, understand, and optimize every rupee with FINIORAA. AI-powered expense tracking, investments, budgets, and financial insights. Bank-grade security, made for India." 
+        />
+        <meta name="keywords" content="personal finance, expense tracker, budget app, investment tracking, financial planning, India, fintech" />
+        <link rel="canonical" href="https://finioraa.com" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="FINIORAA – Your Personal Finance Operating System" />
+        <meta property="og:description" content="Track, understand, and optimize every rupee with AI-powered intelligence and bank-grade security." />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="FINIORAA – Your Personal Finance Operating System" />
+        <meta name="twitter:description" content="Track, understand, and optimize every rupee with AI-powered intelligence." />
+      </Helmet>
+
+      <main className="min-h-screen bg-background">
+        <Navbar />
+        <Hero />
+        <ProblemSection />
+        <SolutionSection />
+        <FeaturesGrid />
+        <HowItWorks />
+        <SecuritySection />
+        <AISection />
+        <FutureSection />
+        <CTABanner />
+        <Footer />
+      </main>
+    </>
   );
 };
 
