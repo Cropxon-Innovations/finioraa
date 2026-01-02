@@ -11,6 +11,9 @@ import FutureSection from "@/components/FutureSection";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 import MobileShowcase from "@/components/MobileShowcase";
+import PricingSection from "@/components/PricingSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   return (
@@ -45,6 +48,9 @@ const Index = () => {
         <SecuritySection />
         <AISection />
         <MobileShowcase />
+        <PricingSection />
+        <TestimonialsSection />
+        <FAQSection />
         <FutureSection />
         <CTABanner />
         <Footer />
