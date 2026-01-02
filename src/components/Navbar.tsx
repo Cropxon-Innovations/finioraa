@@ -16,10 +16,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Features", href: "#features" },
+    { label: "Platform", href: "#features" },
+    { label: "Intelligence", href: "#ai" },
     { label: "How It Works", href: "#how-it-works" },
-    { label: "Security", href: "#security" },
-    { label: "AI Insights", href: "#ai" },
+    { label: "Security & Compliance", href: "#security" },
+    { label: "India-First", href: "#india-first" },
   ];
 
   return (
@@ -68,7 +69,7 @@ const Navbar = () => {
             Sign In
           </Button>
           <Button variant="hero" size="sm">
-            Get Started
+            Request Access
           </Button>
         </div>
 
@@ -106,7 +107,7 @@ const Navbar = () => {
                   Sign In
                 </Button>
                 <Button variant="hero" className="w-full">
-                  Get Started
+                  Request Access
                 </Button>
               </div>
             </nav>
