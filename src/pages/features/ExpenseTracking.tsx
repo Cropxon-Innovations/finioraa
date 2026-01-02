@@ -65,6 +65,7 @@ const ExpenseTracking = () => {
       description="Every rupee, automatically tracked. From UPI payments to credit card swipes, FINIORAA captures and categorizes all your expenses without lifting a finger."
       icon={<Wallet className="w-4 h-4 text-primary" />}
       gradient="from-primary to-blue-500"
+      demoType="expense"
       stats={[
         { label: "Transactions Tracked", value: "50M+" },
         { label: "Accuracy Rate", value: "99.2%" },

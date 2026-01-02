@@ -17,6 +17,7 @@ const AIInsights = () => {
       description="Personalized financial advice powered by advanced AI. Get actionable recommendations tailored to your unique spending patterns and goals."
       icon={<Brain className="w-4 h-4 text-secondary" />}
       gradient="from-secondary to-purple-500"
+      demoType="ai"
       stats={[
         { label: "Insights Generated", value: "5M+" },
         { label: "Avg Savings/User", value: "₹8,500/mo" },

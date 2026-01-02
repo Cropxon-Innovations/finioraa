@@ -50,6 +50,7 @@ const BudgetPlanning = () => {
       description="Intelligent budgets that adapt to your lifestyle. Set it once, and let FINIORAA's AI keep you on track with personalized limits and smart alerts."
       icon={<PieChart className="w-4 h-4 text-primary" />}
       gradient="from-emerald-500 to-teal-500"
+      demoType="budget"
       stats={[
         { label: "Avg Savings Increase", value: "23%" },
         { label: "Budget Adherence", value: "87%" },

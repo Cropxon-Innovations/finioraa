@@ -39,7 +39,7 @@ const FeaturePageLayout = ({
           featureType={demoType}
         />
       )}
-    <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section */}
@@ -151,7 +151,8 @@ const FeaturePageLayout = ({
         </div>
       </section>
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   );
 };

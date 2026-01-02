@@ -66,6 +66,7 @@ const BillManagement = () => {
       description="Never miss a payment again. Track all your bills, get smart reminders, and pay everything from one place. Say goodbye to late fees forever."
       icon={<CreditCard className="w-4 h-4 text-primary" />}
       gradient="from-purple-500 to-pink-500"
+      demoType="bill"
       stats={[
         { label: "Bills Tracked", value: "10M+" },
         { label: "On-Time Rate", value: "99.5%" },

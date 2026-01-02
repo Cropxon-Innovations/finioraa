@@ -18,6 +18,7 @@ const SpendingAnalytics = () => {
       description="Deep dive into your spending habits with beautiful visualizations. Understand where your money goes and discover opportunities to save."
       icon={<BarChart3 className="w-4 h-4 text-secondary" />}
       gradient="from-pink-500 to-rose-500"
+      demoType="analytics"
       stats={[{ label: "Categories", value: "50+" }, { label: "Insights/Month", value: "100+" }, { label: "Data Points", value: "10M+" }, { label: "Reports", value: "Weekly" }]}
     >
       <section className="py-20">

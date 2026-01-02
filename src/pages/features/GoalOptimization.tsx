@@ -16,6 +16,7 @@ const GoalOptimization = () => {
       description="AI-powered goal tracking that adapts to your financial situation. Achieve your dreams faster with optimized saving strategies."
       icon={<Target className="w-4 h-4 text-secondary" />}
       gradient="from-emerald-500 to-teal-500"
+      demoType="goals"
       stats={[{ label: "Goals Created", value: "100K+" }, { label: "Achieved", value: "45K+" }, { label: "Avg Time Saved", value: "3 months" }, { label: "Success Rate", value: "78%" }]}
     >
       <section className="py-20">
