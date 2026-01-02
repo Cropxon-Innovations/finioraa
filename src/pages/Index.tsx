@@ -18,6 +18,7 @@ import ComparisonSection from "@/components/ComparisonSection";
 import InsuranceSection from "@/components/InsuranceSection";
 import IndiaFirstSection from "@/components/IndiaFirstSection";
 import ROICalculator from "@/components/ROICalculator";
+import MobileCTA from "@/components/MobileCTA";
 
 const Index = () => {
   return (
@@ -62,6 +63,7 @@ const Index = () => {
         <FutureSection />
         <CTABanner />
         <Footer />
+        <MobileCTA />
       </main>
     </>
   );

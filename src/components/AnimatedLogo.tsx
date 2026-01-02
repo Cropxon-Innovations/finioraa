@@ -1,9 +1,25 @@
 import { motion } from "framer-motion";
 
-const AnimatedLogo = () => {
+interface AnimatedLogoProps {
+  size?: "sm" | "md" | "lg";
+}
+
+const AnimatedLogo = ({ size = "md" }: AnimatedLogoProps) => {
+  const sizeClasses = {
+    sm: "w-8 h-8",
+    md: "w-10 h-10",
+    lg: "w-16 h-16",
+  };
+
+  const textSizes = {
+    sm: "text-sm",
+    md: "text-lg",
+    lg: "text-2xl",
+  };
+
   return (
     <motion.div
-      className="relative w-10 h-10"
+      className={`relative ${sizeClasses[size]}`}
       whileHover={{ scale: 1.05 }}
     >
       {/* Glow effect layers */}
@@ -65,7 +81,7 @@ const AnimatedLogo = () => {
         
         {/* F letter with pulse */}
         <motion.span
-          className="text-primary-foreground font-bold text-lg relative z-10"
+          className={`text-primary-foreground font-bold ${textSizes[size]} relative z-10`}
           animate={{
             textShadow: [
               "0 0 10px rgba(255, 255, 255, 0.5)",
