@@ -327,12 +327,6 @@ const InteractiveDemoModal = ({ isOpen, onClose }: InteractiveDemoModalProps) =>
                 <Bell className="w-5 h-5" />
                 <span className="absolute -top-1 -right-1 w-4 h-4 bg-destructive rounded-full text-[10px] text-white flex items-center justify-center">3</span>
               </motion.button>
-              <button
-                onClick={onClose}
-                className="w-10 h-10 rounded-full bg-background/50 border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
             </div>
           </div>
 
