@@ -80,6 +80,7 @@ const InsuranceTracker = () => {
       description="All your insurance policies in one place. Track premiums, compare options, and ensure your family is always protected with the right coverage."
       icon={<Shield className="w-4 h-4 text-primary" />}
       gradient="from-amber-500 to-orange-500"
+      demoType="insurance"
       stats={[
         { label: "Policies Tracked", value: "500K+" },
         { label: "Coverage Protected", value: "₹1000Cr+" },

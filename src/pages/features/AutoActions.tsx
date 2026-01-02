@@ -17,6 +17,7 @@ const AutoActions = () => {
       description="Set it and forget it. Automated savings, investments, and payments that work in the background while you focus on living your life."
       icon={<Zap className="w-4 h-4 text-secondary" />}
       gradient="from-amber-500 to-orange-500"
+      demoType="auto-actions"
       stats={[{ label: "Active Automations", value: "500K+" }, { label: "Auto-Saved", value: "₹50Cr+" }, { label: "Late Fees Avoided", value: "₹2Cr+" }, { label: "Users", value: "80K+" }]}
     >
       <section className="py-20">

@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Eye, EyeOff, Mail, Lock, ArrowLeft, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedLogo from "@/components/AnimatedLogo";
+import UserOnboarding from "@/components/UserOnboarding";
 import { z } from "zod";
 
 const emailSchema = z.string().email("Please enter a valid email address");
@@ -25,6 +26,8 @@ const Auth = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<{ email?: string; password?: string; confirmPassword?: string }>({});
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [isNewUser, setIsNewUser] = useState(false);
   
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -32,19 +35,19 @@ const Auth = () => {
   useEffect(() => {
     // Check if user is already logged in
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (session?.user) {
+      if (session?.user && !isNewUser) {
         navigate("/");
       }
     });
 
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
+      if (session?.user && !isNewUser) {
         navigate("/");
       }
     });
 
     return () => subscription.unsubscribe();
-  }, [navigate]);
+  }, [navigate, isNewUser]);
 
   const validateForm = () => {
     const newErrors: typeof errors = {};
@@ -106,8 +109,10 @@ const Auth = () => {
 
         toast({
           title: "Account created!",
-          description: "Welcome to FINIORAA. You're now signed in.",
+          description: "Welcome to FINIORAA. Let's set up your account.",
         });
+        setIsNewUser(true);
+        setShowOnboarding(true);
       }
     } catch (error: any) {
       let message = error.message;
@@ -123,6 +128,26 @@ const Auth = () => {
       setLoading(false);
     }
   };
+
+  const handleOnboardingComplete = () => {
+    setShowOnboarding(false);
+    setIsNewUser(false);
+    navigate("/");
+  };
+
+  if (showOnboarding) {
+    return (
+      <UserOnboarding 
+        isOpen={showOnboarding}
+        onClose={() => {
+          setShowOnboarding(false);
+          setIsNewUser(false);
+          navigate("/");
+        }}
+        onComplete={handleOnboardingComplete} 
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background flex">

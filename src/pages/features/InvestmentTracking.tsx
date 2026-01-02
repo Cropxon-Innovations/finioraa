@@ -54,6 +54,7 @@ const InvestmentTracking = () => {
       description="Your complete investment picture in one dashboard. Stocks, mutual funds, FDs, gold, crypto – track everything with real-time updates and detailed analytics."
       icon={<TrendingUp className="w-4 h-4 text-primary" />}
       gradient="from-blue-500 to-indigo-500"
+      demoType="investment"
       stats={[
         { label: "Assets Tracked", value: "₹500Cr+" },
         { label: "Portfolios Managed", value: "100K+" },

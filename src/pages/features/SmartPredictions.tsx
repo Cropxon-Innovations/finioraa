@@ -10,6 +10,7 @@ const SmartPredictions = () => {
       description="AI-powered cash flow forecasting. Know exactly how much you'll have at month end, predict upcoming expenses, and plan ahead with confidence."
       icon={<Sparkles className="w-4 h-4 text-secondary" />}
       gradient="from-violet-500 to-purple-500"
+      demoType="predictions"
       stats={[{ label: "Prediction Accuracy", value: "92%" }, { label: "Days Ahead", value: "90" }, { label: "Users", value: "50K+" }, { label: "Predictions/Day", value: "1M+" }]}
     >
       <section className="py-20">
