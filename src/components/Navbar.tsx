@@ -108,8 +108,12 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-4">
           <ThemeToggle />
-          <Button variant="ghost" size="sm">Sign In</Button>
-          <Button variant="hero" size="sm">Request Access</Button>
+          <Link to="/auth">
+            <Button variant="ghost" size="sm">Sign In</Button>
+          </Link>
+          <Link to="/auth?mode=signup">
+            <Button variant="hero" size="sm">Request Access</Button>
+          </Link>
         </div>
 
         <button className="lg:hidden p-2 text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -130,8 +134,12 @@ const Navbar = () => {
                   <span className="text-sm text-muted-foreground">Theme</span>
                   <ThemeToggle />
                 </div>
-                <Button variant="ghost" className="w-full">Sign In</Button>
-                <Button variant="hero" className="w-full">Request Access</Button>
+                <Link to="/auth" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full">Sign In</Button>
+                </Link>
+                <Link to="/auth?mode=signup" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="hero" className="w-full">Request Access</Button>
+                </Link>
               </div>
             </nav>
           </motion.div>
