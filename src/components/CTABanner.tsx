@@ -3,12 +3,10 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { useWaitlist } from "@/hooks/useWaitlist";
 
 const CTABanner = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { openWaitlist } = useWaitlist();
 
   return (
     <section ref={ref} className="py-24 relative overflow-hidden">
@@ -57,7 +55,7 @@ const CTABanner = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="hero" size="xl" className="group" onClick={openWaitlist}>
+              <Button variant="hero" size="xl" className="group">
                 Get Started Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>

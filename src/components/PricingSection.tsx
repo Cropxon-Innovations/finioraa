@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, Star, Zap, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useWaitlist } from "@/hooks/useWaitlist";
 
 const plans = [
   {
@@ -71,8 +70,6 @@ const plans = [
 ];
 
 const PricingSection = () => {
-  const { openWaitlist } = useWaitlist();
-
   return (
     <section className="py-24 relative overflow-hidden" id="pricing">
       {/* Background */}
@@ -146,7 +143,6 @@ const PricingSection = () => {
                     : ""
                 }`}
                 variant={plan.popular ? "default" : "outline"}
-                onClick={openWaitlist}
               >
                 {plan.cta}
               </Button>
