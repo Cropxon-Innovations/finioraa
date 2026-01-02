@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, IndianRupee, TrendingUp, Shield, Sparkles, PieChart, Wallet } from "lucide-react";
 import DashboardPreview from "./DashboardPreview";
+import { useWaitlist } from "@/hooks/useWaitlist";
 
 const FloatingIcon = ({ 
   icon: Icon, 
@@ -36,6 +37,8 @@ const FloatingIcon = ({
 );
 
 const Hero = () => {
+  const { openWaitlist } = useWaitlist();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background */}
@@ -127,7 +130,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button variant="hero" size="xl" className="group">
+            <Button variant="hero" size="xl" className="group" onClick={openWaitlist}>
               Get Started Free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>

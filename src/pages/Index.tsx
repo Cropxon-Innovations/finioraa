@@ -16,8 +16,14 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import InsuranceSection from "@/components/InsuranceSection";
+import ROICalculator from "@/components/ROICalculator";
+import DocumentVaultSection from "@/components/DocumentVaultSection";
+import WaitlistModal from "@/components/WaitlistModal";
+import { WaitlistProvider, useWaitlist } from "@/hooks/useWaitlist";
 
-const Index = () => {
+const IndexContent = () => {
+  const { isOpen, closeWaitlist } = useWaitlist();
+
   return (
     <>
       <Helmet>
@@ -50,7 +56,9 @@ const Index = () => {
         <SecuritySection />
         <AISection />
         <MobileShowcase />
+        <DocumentVaultSection />
         <InsuranceSection />
+        <ROICalculator />
         <PricingSection />
         <TestimonialsSection />
         <ComparisonSection />
@@ -59,7 +67,17 @@ const Index = () => {
         <CTABanner />
         <Footer />
       </main>
+
+      <WaitlistModal isOpen={isOpen} onClose={closeWaitlist} />
     </>
+  );
+};
+
+const Index = () => {
+  return (
+    <WaitlistProvider>
+      <IndexContent />
+    </WaitlistProvider>
   );
 };
 

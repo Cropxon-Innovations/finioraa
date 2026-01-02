@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, X, Minus } from "lucide-react";
+import { useWaitlist } from "@/hooks/useWaitlist";
 
 const competitors = [
   { name: "FINIORAA", highlight: true },
@@ -83,6 +84,8 @@ const FeatureIcon = ({ value }: { value: boolean | string }) => {
 };
 
 const ComparisonSection = () => {
+  const { openWaitlist } = useWaitlist();
+
   return (
     <section className="py-24 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
       {/* Background elements */}
@@ -257,6 +260,7 @@ const ComparisonSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={openWaitlist}
               className="px-6 py-3 bg-gradient-to-r from-primary to-accent rounded-xl font-semibold text-primary-foreground whitespace-nowrap"
             >
               Get Started Free

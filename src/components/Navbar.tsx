@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useWaitlist } from "@/hooks/useWaitlist";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { openWaitlist } = useWaitlist();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +69,7 @@ const Navbar = () => {
           <Button variant="ghost" size="sm">
             Sign In
           </Button>
-          <Button variant="hero" size="sm">
+          <Button variant="hero" size="sm" onClick={openWaitlist}>
             Get Started
           </Button>
         </div>
@@ -105,7 +107,7 @@ const Navbar = () => {
                 <Button variant="ghost" className="w-full">
                   Sign In
                 </Button>
-                <Button variant="hero" className="w-full">
+                <Button variant="hero" className="w-full" onClick={() => { openWaitlist(); setIsMobileMenuOpen(false); }}>
                   Get Started
                 </Button>
               </div>
