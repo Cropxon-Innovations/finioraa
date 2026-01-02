@@ -17,6 +17,7 @@ import FAQSection from "@/components/FAQSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import InsuranceSection from "@/components/InsuranceSection";
 import IndiaFirstSection from "@/components/IndiaFirstSection";
+import ROICalculator from "@/components/ROICalculator";
 
 const Index = () => {
   return (
@@ -55,6 +56,7 @@ const Index = () => {
         <InsuranceSection />
         <PricingSection />
         <TestimonialsSection />
+        <ROICalculator />
         <ComparisonSection />
         <FAQSection />
         <FutureSection />

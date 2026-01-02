@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Wallet, PieChart, TrendingUp, CreditCard, Shield, Brain, Sparkles, BarChart3, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import AnimatedLogo from "@/components/AnimatedLogo";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,9 +51,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">F</span>
-          </div>
+          <AnimatedLogo />
           <span className="text-xl font-bold tracking-tight gradient-text">FINIORAA</span>
         </Link>
 
