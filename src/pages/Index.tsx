@@ -19,6 +19,7 @@ import InsuranceSection from "@/components/InsuranceSection";
 import IndiaFirstSection from "@/components/IndiaFirstSection";
 import ROICalculator from "@/components/ROICalculator";
 import MobileCTA from "@/components/MobileCTA";
+import AboutSection from "@/components/AboutSection";
 
 const Index = () => {
   return (
@@ -53,6 +54,7 @@ const Index = () => {
         <SecuritySection />
         <AISection />
         <IndiaFirstSection />
+        <AboutSection />
         <MobileShowcase />
         <InsuranceSection />
         <PricingSection />
