@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Wallet, PieChart, TrendingUp, CreditCard, Shield, Brain, Sparkles, BarChart3, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedLogo from "@/components/AnimatedLogo";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -106,6 +107,7 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
+          <ThemeToggle />
           <Button variant="ghost" size="sm">Sign In</Button>
           <Button variant="hero" size="sm">Request Access</Button>
         </div>
@@ -124,6 +126,10 @@ const Navbar = () => {
               <div className="text-xs font-semibold text-muted-foreground uppercase mt-4 mb-2">Intelligence</div>
               {intelligenceFeatures.map((f) => (<Link key={f.label} to={f.href} className="flex items-center gap-3 py-2" onClick={() => setIsMobileMenuOpen(false)}><f.icon className="w-4 h-4 text-secondary" />{f.label}</Link>))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border mt-4">
+                <div className="flex items-center justify-between py-2">
+                  <span className="text-sm text-muted-foreground">Theme</span>
+                  <ThemeToggle />
+                </div>
                 <Button variant="ghost" className="w-full">Sign In</Button>
                 <Button variant="hero" className="w-full">Request Access</Button>
               </div>
