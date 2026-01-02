@@ -14,6 +14,7 @@ import MobileShowcase from "@/components/MobileShowcase";
 import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
+import ComparisonSection from "@/components/ComparisonSection";
 
 const Index = () => {
   return (
@@ -50,6 +51,7 @@ const Index = () => {
         <MobileShowcase />
         <PricingSection />
         <TestimonialsSection />
+        <ComparisonSection />
         <FAQSection />
         <FutureSection />
         <CTABanner />
