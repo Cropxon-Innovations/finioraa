@@ -22,6 +22,24 @@ import SpendingAnalytics from "./pages/features/SpendingAnalytics";
 import GoalOptimization from "./pages/features/GoalOptimization";
 import AutoActions from "./pages/features/AutoActions";
 
+// Company Pages
+import AboutUs from "./pages/company/AboutUs";
+import Careers from "./pages/company/Careers";
+import Blog from "./pages/company/Blog";
+import PressKit from "./pages/company/PressKit";
+
+// Legal Pages
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsOfService from "./pages/legal/TermsOfService";
+import CookiePolicy from "./pages/legal/CookiePolicy";
+import GDPR from "./pages/legal/GDPR";
+
+// Support Pages
+import HelpCenter from "./pages/support/HelpCenter";
+import ContactUs from "./pages/support/ContactUs";
+import APIDocs from "./pages/support/APIDocs";
+import Status from "./pages/support/Status";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -48,6 +66,24 @@ const App = () => (
             <Route path="/features/spending-analytics" element={<SpendingAnalytics />} />
             <Route path="/features/goal-optimization" element={<GoalOptimization />} />
             <Route path="/features/auto-actions" element={<AutoActions />} />
+            
+            {/* Company Pages */}
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/press" element={<PressKit />} />
+            
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/cookies" element={<CookiePolicy />} />
+            <Route path="/gdpr" element={<GDPR />} />
+            
+            {/* Support Pages */}
+            <Route path="/help" element={<HelpCenter />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/api-docs" element={<APIDocs />} />
+            <Route path="/status" element={<Status />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
