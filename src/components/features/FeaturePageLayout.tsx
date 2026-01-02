@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FeatureDemoModal from "@/components/features/FeatureDemoModal";
 
 interface FeaturePageLayoutProps {
   title: string;
@@ -14,6 +15,7 @@ interface FeaturePageLayoutProps {
   gradient: string;
   children: ReactNode;
   stats?: { label: string; value: string }[];
+  demoType?: 'expense' | 'budget' | 'investment' | 'bill' | 'insurance' | 'ai' | 'predictions' | 'auto-actions' | 'analytics' | 'goals';
 }
 
 const FeaturePageLayout = ({
@@ -23,9 +25,20 @@ const FeaturePageLayout = ({
   icon,
   gradient,
   children,
-  stats
+  stats,
+  demoType
 }: FeaturePageLayoutProps) => {
+  const [showDemo, setShowDemo] = useState(false);
+  
   return (
+    <>
+      {demoType && (
+        <FeatureDemoModal
+          isOpen={showDemo}
+          onClose={() => setShowDemo(false)}
+          featureType={demoType}
+        />
+      )}
     <div className="min-h-screen bg-background">
       <Navbar />
       
@@ -76,9 +89,12 @@ const FeaturePageLayout = ({
                   Get Started Free
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="outline" size="xl">
-                  Watch Demo
-                </Button>
+                {demoType && (
+                  <Button variant="outline" size="xl" onClick={() => setShowDemo(true)}>
+                    <Play className="w-4 h-4 mr-2" />
+                    Watch Demo
+                  </Button>
+                )}
               </div>
             </motion.div>
 
@@ -136,7 +152,7 @@ const FeaturePageLayout = ({
       </section>
 
       <Footer />
-    </div>
+    </>
   );
 };
 
